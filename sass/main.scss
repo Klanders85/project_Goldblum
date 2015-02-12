@@ -50,6 +50,10 @@
    			color: $hover-color;
    		}
    }
+
+   @mixin bg-img($imgURL){
+
+   }
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
@@ -95,7 +99,7 @@ body{
 	  	height: 100vh;
 	  	background: url(/img/intro-section-bg.jpg) no-repeat center center fixed;
 	  	background-size: cover;
-		.intro-content{
+		.intro-section{
 			position: absolute;
 			top: 200px;
 			right: 280px;
@@ -127,17 +131,27 @@ body{
 		background: url(/img/about-section-bg.jpg) no-repeat center center fixed;
 		background-size: 100%;
 		background-color: #222;
-		h1{
-			margin-left: 25px;
-		}
-		ul{
-			width: 360px;
-			li{
-				margin-bottom: 10px;
+		position: relative;
+		.about-section{
+			position: absolute;
+			left: 200px;
+			bottom: 60px;
+			h1{
+				color: #34495e;
+				border-bottom: 3px solid white;
 			}
-		}
-		a{
-			@include link-style(lightsteelblue, gold);
-		}
+			ul{
+				width: 360px;
+				padding: 0;
+				li{
+					margin-bottom: 10px;
+					list-style-type: none;
+					color: #bdc3c7;
+				}
+			}
+			a{
+				@include link-style(lightsteelblue, gold);
+			}
+		}	
 	}
 /*******************************************/

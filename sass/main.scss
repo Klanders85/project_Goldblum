@@ -37,6 +37,19 @@
    $fontPrimary: 'ostrich-sans-headers';
    $fontSecondary: 'hattori_hanzo';
    $headerSize: 50px;
+
+/* ==========================================================================
+	Mixins
+   ========================================================================== */
+
+   @mixin link-style($link-color, $hover-color){
+		margin: 5px;
+		text-decoration: none;
+		color: $link-color;
+   		&:hover{
+   			color: $hover-color;
+   		}
+   }
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
@@ -46,20 +59,67 @@ button,
 input,
 select,
 textarea {
-    color: #222;
+    color: #eee;
 }
 html {
     font-size: 1em;
     line-height: 1.4;
-}
-html, body {
-  height: 100%;
+   
 }
 body{
-	background-color:  #222;
-	color: #fff;
+	color: #eee;
+	font-family: 'helvetica';
 }
 
 /* ==========================================================================
    Author's custom styles - Home
    ========================================================================== */
+.intro-section-wrap{
+  	max-width: 1400px;
+  	height: 1000px;
+  	background: url(/img/intro-section-bg.jpg) no-repeat center center fixed;
+  	background-size: cover;
+	.intro-content{
+		position: absolute;
+		top: 200px;
+		right: 280px;
+		display: inline-block;
+		padding: 50px;
+   		border: 3px solid;
+   		text-align: center;
+   		h1, a{
+   			margin: 0;
+   			padding: 0;
+   			letter-spacing: 2px;
+   		}
+   		a{	
+			@include link-style(#222,gold);
+   		} 			
+	}
+}
+.section-separator{
+	position: relative;
+	height: 10px;
+}
+.about-section-wrap{
+	display: flex;
+	flex-direction: column;
+	width: 1280px;
+	height: 635px;
+	background: url(/img/about-section-bg.jpg) no-repeat center center fixed;
+	background-size: cover;
+	background-color: #222;
+	background-position-x: 470px;
+	h1{
+		margin-left: 25px;
+	}
+	ul{
+		width: 360px;
+		li{
+			margin-bottom: 10px;
+		}
+	}
+	a{
+		@include link-style(lightsteelblue, gold);
+	}
+}

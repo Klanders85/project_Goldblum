@@ -20,8 +20,6 @@ module.exports = function(grunt) {
         },
         files: {                         // Dictionary of files
           'css/main.css': 'sass/main.scss',       // 'destination': 'source'
-          'css/about.css': 'sass/about.scss',
-          'css/filmography.css': 'sass/filmography.scss',
         }
       }
     },
@@ -32,7 +30,7 @@ module.exports = function(grunt) {
         separator: ';',
       },
       dist: {
-        src: ['css/libs/bootstrap.min.css','css/main.css','css/about.css'],
+        src: ['css/libs/bootstrap.min.css','css/main.css'],
         dest: 'css/build/main.css',
       },
     },

@@ -1,6 +1,8 @@
 /* ==========================================================================
    Fonts
    ========================================================================== */
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+@import url(http://fonts.googleapis.com/css?family=Esteban);
 @font-face {
 
 	font-family: 'ostrich-sans-headers';
@@ -137,13 +139,15 @@ body{
 			left: 200px;
 			bottom: 60px;
 			h1{
-				color: #34495e;
+				font-family: 'Montserrat';
+				color: #fff;
 				border-bottom: 3px solid white;
 			}
 			ul{
 				width: 360px;
 				padding: 0;
 				li{
+					font-family: 'Esteban';
 					margin-bottom: 10px;
 					list-style-type: none;
 					color: #bdc3c7;

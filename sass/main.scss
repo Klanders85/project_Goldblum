@@ -1,0 +1,167 @@
+/* ==========================================================================
+   Fonts
+   ========================================================================== */
+@font-face {
+
+	font-family: 'nexarustsBlackshadow';
+
+	src: url('/css/fonts/nexarustslab_blackshadow/NexaRustSlab-BlackShadow01-Free-webfont.eot'); /* IE9 Compat Modes */
+
+	src: url('/css/fonts/nexarustslab_blackshadow/NexaRustSlab-BlackShadow01-Free-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+
+	url('/css/fonts/nexarustslab_blackshadow/NexaRustSlab-BlackShadow01-Free-webfont.woff') format('woff'), /* Modern Browsers */
+
+	url('/css/fonts/nexarustslab_blackshadow/NexaRustSlab-BlackShadow01-Free-webfont.ttf') format('truetype'), /* Safari, Android, iOS */
+
+	url('/css/fonts/nexarustslab_blackshadow/NexaRustSlab-BlackShadow01-Free-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+
+	font-family: 'geometriaLight';
+
+	src: url('/css/fonts/geometria_light_macroman/Geometria-Light-webfont.eot'); /* IE9 Compat Modes */
+
+	src: url('/css/fonts/geometria_light_macroman/Geometria-Light-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+
+	url('/css/fonts/geometria_light_macroman/Geometria-Light-webfont.woff') format('woff'), /* Modern Browsers */
+
+	url('/css/fonts/geometria_light_macroman/Geometria-Light-webfont.ttf') format('truetype'), /* Safari, Android, iOS */
+
+	url('/css/fonts/geometria_light_macroman/Geometria-Light-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+
+}
+/* ==========================================================================
+   Vars
+   ========================================================================== */
+   $fontPrimary: 'nexarustsBlackshadow';
+   $fontSecondary: 'geometriaLight';
+   $headerSize: 72px;
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+html {
+    font-size: 1em;
+    line-height: 1.4;
+    font-family: $fontPrimary;
+}
+html, body {
+  height: 100%;
+}
+body{
+	background-color:  #222;
+	color: #fff;
+}
+
+/* ==========================================================================
+   Author's custom styles - Home
+   ========================================================================== */
+header, .content-wrap {
+	display: flex;
+}
+
+header{
+ 	justify-content: space-around;
+ 	margin-top: 30px;
+ 	.logo{
+ 		width: 200px;
+  		text-align: center;
+  		img{
+      		width: 100px;
+      		border-radius: 50%;
+   		}
+	}
+	.pageTitle{
+		text-align: center;
+		h1{
+			font-size: $headerSize;
+		}
+	}
+  	.nav{
+		ul{
+			padding: 0;
+			text-align: center;
+		}
+		li{
+			list-style-type: none;
+			a{
+				color: orange;
+			}
+		}
+  	}
+}
+
+.slider-wrap{
+	.slider{
+		width: 1200px;
+		margin: 0 auto;
+		position: relative; 
+		overflow: auto;
+		ul li{
+			float: left;
+		}
+		li{
+			list-style: none;
+			height: 700px;
+		}	img{
+			width: 1160px;
+		}
+	}
+}
+
+.content-wrap{
+	justify-content: space-around;
+	min-height: 100%;
+	margin-bottom: -20px;
+	&:after{
+		content: "";
+		display: block;
+	}
+	div{
+		flex: 1;
+		text-align: center;
+		padding: 20px;
+		font-family: $fontSecondary;	
+	}
+}
+
+.footer-wrap, .content-wrap:after{
+	height: 142px;
+}
+
+.footer-wrap{
+	background-color: orange;
+	text-align: center;
+}
+/* ==========================================================================
+   Author's custom styles - About
+   ========================================================================== */
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+@media only screen and (max-device-width : 320px){
+	header{
+		flex-direction: column;
+		.logo{
+			width: inherit;
+		}
+	}
+}
+@media only screen and (max-device-width : 768px){
+	.hide-on-mobile{
+		display: none;
+	}
+	.content-wrap{
+		flex-direction: column;
+	}
+}
+

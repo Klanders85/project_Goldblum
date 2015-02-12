@@ -1,4 +1,6 @@
 // init unSlider for the Goldblum	
 $(function(){
-	$('.slider').unslider();
+	$('.slider').unslider({
+		keys: true
+	});
 })

@@ -1,0 +1,18 @@
+# Stylesheet #
+##############
+
+.sass-cache
+*.css.map
+
+
+# OS Generated #
+################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+

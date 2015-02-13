@@ -189,10 +189,24 @@ p{
 				width: 400px;
 			}
 			hr{
-				margin-right: 145px;
+				border-color: #222;
+				width: 253px;
 				position: relative;
-				right: 113px;
+				right: 176px; 
 				top: 3px;
+				-webkit-animation: hrFade 2s; /* Chrome, Safari, Opera */
+    			animation: hrFade 2s;
+    			/* Chrome, Safari, Opera */
+				@-webkit-keyframes hrFade {
+				    from {right: 0px;}
+				    to {right: 176px;}
+				}
+
+				/* Standard syntax */
+				@keyframes hrFade {
+				    from {right: 0px;}
+				    to {right: 176px;}
+				}
 			}
 			#film-grid{
 				position: relative;

@@ -32,26 +32,20 @@
 	},
 	{	
 		"tv_show" : {
-			"title" : "The League (TV Show) : Ruxin&rsquo;s Dad",
+			"title" : "The League (TV Show) : Ruxin's Dad",
 			"year"  : "2010",
 			"genre" : "TV Show / Comedy"
 		}
 	}];
 
-$(document).ready(function(){
-	$.each(filmography, function(arrayIndex, value){
-		var br = '<br />';
-		var movieTitle =  this.movie.title;
-		var movieYear  =  this.movie.year;
-		var movieGenre =  this.movie.genre;
-		$('#film-grid').append('<p>' + movieTitle + '  ' + movieYear + '  ' + movieGenre + '</p>');
-	})
 
-	// $.each(filmography, function(arrayIndex, value){
-	// 	var br = '<br />';
-	// 	var tv_showTitle =  this.tv_show.title;
-	// 	var tv_showYear  =  this.tv_show.year;
-	// 	var tv_showGenre =  this.tv_show.genre;
-	// 	$('#film-grid').append('<p>' + tv_showTitle + '  ' + tv_showYear + '  ' + tv_showGenre + '</p>');
-	// })
+$(document).ready(function(){
+	$.each(filmography, function(){
+		$.each(this, function(index,value){
+			// $('#film-grid').append('<p>' + index + '</p>');
+			$.each(this, function(name, value){
+				$('#film-grid').append('<h4>'+ value +'</h4>');
+			})
+		})
+	})
 })

@@ -52,6 +52,7 @@
 		color: $link-color;
    		&:hover{
    			color: $hover-color;
+   			text-decoration: underline;
    		}
    }
 
@@ -85,7 +86,7 @@ p{
 	font-family: $fontCopyMain;
 }
 /* ==========================================================================
-   Author's custom styles - Home
+   Author's custom styles
    ========================================================================== */
 
 /*
@@ -95,6 +96,9 @@ p{
 		position: relative;
 		height: 1px;
 		background-color: #000; 
+	}
+	.about-section-wrap, .film-section-wrap, .bestOf-section-wrap{
+		display: flex;
 	}
 /********************************************/
 
@@ -125,7 +129,7 @@ p{
 				@include link-style(#222,gold);
 	   		} 			
 		}
-}
+	}
 /********************************************/
 
 
@@ -133,7 +137,6 @@ p{
 	About Section Styles
 */
 	.about-section-wrap{
-		display: flex;
 		flex-direction: column;
 		max-width: 100%;
 		height: 100vh;
@@ -171,7 +174,6 @@ p{
 	Filmography Section Styles
 */
 	.film-section-wrap{
-		display: flex;
 		justify-content: flex-end;
 		max-width: 100%;
 		height: 100vh;
@@ -190,22 +192,22 @@ p{
 			}
 			hr{
 				border-color: #222;
-				width: 253px;
+				width: 263px;
 				position: relative;
-				right: 176px; 
+				right: 182px; 
 				top: 3px;
 				-webkit-animation: hrFade 2s; /* Chrome, Safari, Opera */
     			animation: hrFade 2s;
     			/* Chrome, Safari, Opera */
 				@-webkit-keyframes hrFade {
 				    from {right: 0px;}
-				    to {right: 176px;}
+				    to {right: 182px;}
 				}
 
 				/* Standard syntax */
 				@keyframes hrFade {
 				    from {right: 0px;}
-				    to {right: 176px;}
+				    to {right: 182px;}
 				}
 			}
 			#film-grid{
@@ -218,6 +220,26 @@ p{
 /*******************************************/
 
 
+/*
+	Best Of Section Styles
+*/
+	.bestOf-section-wrap{
+		justify-content: center;
+		height: 100vh;
+		.bestOf-section{
+			width: 100%;
+			text-align: center;
+			h1, h2, p{
+				color: #222;
+			}
+			.column-wrap{
+				display: flex;
+				justify-content: space-between;
+				padding: 50px;
+			}
+		}
+	}
+/*******************************************/
 
 
 

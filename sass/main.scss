@@ -64,7 +64,6 @@
    ========================================================================== */
 
 html,
-button,
 input,
 select,
 textarea {
@@ -182,27 +181,8 @@ p{
 			h1{
 				color: #000;
 			}
-			// hr{
-			// 	border-color: #222;
-			// 	width: 263px;
-			// 	position: relative;
-			// 	right: 42px;
-			// 	-webkit-animation: hrFade 2s; /* Chrome, Safari, Opera */
-   //  			animation: hrFade 2s;
-   //  			/* Chrome, Safari, Opera */
-			// 	@-webkit-keyframes hrFade {
-			// 	    from {right: 0px;}
-			// 	    to {right: 42px;}
-			// 	}
-
-			// 	/* Standard syntax */
-			// 	@keyframes hrFade {
-			// 	    from {right: 0px;}
-			// 	    to {right: 42px;}
-			// 	}
-			// }
 			img{
-				width: 200px;
+				max-height: 317px;
 			}
 			.film-grid-wrap{
 				display: flex;

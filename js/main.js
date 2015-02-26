@@ -1,48 +1,54 @@
 (function(){
-	var app = angular.module('filmography', [])
+	var app = angular.module('goldBlum', [])
 	
+	app.controller('FilmController', function(){
+		this.filmData = filmography;
+	})
+
 	var filmography = [
+		// {
+		// 	title : "Invasion of The Body Snatchers",
+		// 	year  : "1978",
+		// 	genre : "Sci - Fi / Horror",
+		// 	media : "Movie",
+		// 	image : '/img/posters/bodySnatchers.jpg'
+		// },
 		{
-			"movie" : {
-				"title" : "Jurrasic Park",
-				"year"  : "1993",
-				"genre" : "Action / Adventure"
-			}
+			title : "The Fly",
+			year  : "1986",
+			genre : "Sci - Fi / Gross",
+			media : "Movie",
+			image : '/img/posters/theFly.jpg'
 		},
 		{
-			"movie" : {
-				"title" : "Independence Day",
-				"year"  : "1996",
-				"genre" : "Action / Adventure"
-			}
+			title : "Jurrasic Park",
+			year  : "1993",
+			genre : "Action / Adventure",
+			media : "Movie",
+			image : '/img/posters/jurassicPark.jpg'
 		},
 		{
-			"movie" : {
-				"title" : "The Fly",
-				"year"  : "1986",
-				"genre" : "Sci - Fi / Gross"
-			}
+			title : "Independence Day",
+			year  : "1996",
+			genre : "Action / Adventure",
+			media : "Movie",
+			image : '/img/posters/independenceDay.jpg'
 		},
 		{	
-			"movie" : {
-				"title" : "Lost World : Jurrasic Park 2",
-				"year"  : "1997",
-				"genre" : "Action / Adventure"
-			}
+			title : "Lost World:Jurrasic Park",
+			year  : "1997",
+			genre : "Action / Adventure",
+			media : "Movie",
+			image : '/img/posters/lostWorld.jpg'
 		},
 		{	
-			"tv_show" : {
-				"title" : "The League (TV Show) : Ruxin's Dad",
-				"year"  : "2010",
-				"genre" : "TV Show / Comedy"
-			}
+			title : "Grand Budapest Hotel",
+			year  : "2014",
+			genre : "Drama",
+			media : "Movie",
+			image : '/img/posters/grandBudapestHotel.jpg'
 		}
 	]; //end filmography array
-
-
-	app.controller('FilmController', function(){
-		this.movie = filmography;
-	})
 
 })(); // end closure
 

@@ -1,5 +1,5 @@
-Jeff Goldblum Fan/Gag/FlexBox Site
+Jeff Goldblum Fan Site/Angular App/CSS FlexBox
 
-Made this to show off the capabilites of CSS Flexbox and how easy it was to make a layout for multiple pages.
+More to come later
 
 -KDL

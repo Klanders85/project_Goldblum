@@ -1,5 +1,5 @@
 (function(){
-	var app     = angular.module('goldBlum', []);
+	var app = angular.module('goldBlum', []);
 	
 	app.controller('FilmController', function($scope){
 		this.filmData = filmography;

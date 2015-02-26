@@ -190,16 +190,14 @@ p{
 				flex-wrap: wrap;
 				div{
 					position: relative;
-					h4{
-						width: 200px;
-					}
-					p{
-						width: 220px;
-					}
+				}
+				button{
+					position: relative;
+					bottom: 20px;
 				}
 				.filmInfo{
 					position: absolute;
-					bottom: 40px;
+					bottom: 60px;
 					background-color: rgba(255,255,255,0.8);
 				}
 			}

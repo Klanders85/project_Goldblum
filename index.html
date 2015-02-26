@@ -13,6 +13,7 @@
         <script type="text/javascript" src="js/main.js"></script>
     </head>
     <body>
+        <div class="container-fluid">
         <section name="intro">
             <div class="intro-section-wrap">
                 <div class="intro-section">
@@ -52,6 +53,7 @@
                         <!-- the "film" in "film.filmData" is referencing the "FilmController" alias "film" -->
                         <div ng-repeat="filmData in film.filmData">
                             <a ng-href="http://www.imdb.com/title/{{filmData.imdbId}}"><img ng-src="{{filmData.image}}" /></a><br />
+                            <!-- you need to get the logic out of the view(buttons) and get it in the controller where it belongs -->
                             <button class="btn btn-success" ng-click="filmData.showSummary = true">Show Detail</button>
                             <button class="btn btn-danger" ng-show="filmData.showSummary" ng-click="filmData.showSummary = false">Hide Detail</button>
                             <div class="filmInfo" ng-show="filmData.showSummary">
@@ -64,5 +66,6 @@
                 </div>
             </div>
         </section> <!--End Film Section -->
+    </div>
     </body>
 </html>

@@ -4,8 +4,7 @@
 	app.controller('FilmController', function($scope){
 		this.filmData = filmography;
 	})
-
-
+	
 	var filmography = [
 		// {
 		// 	title : "Invasion of The Body Snatchers",

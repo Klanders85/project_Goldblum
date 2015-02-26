@@ -56,8 +56,9 @@
                             <h3>{{filmData.genre}}</h3>
                             <a ng-href="http://www.imdb.com/title/{{filmData.imdbId}}"><img ng-src="{{filmData.image}}" /></a><br /><br />  
 
-                            <button class="btn btn-success" ng-click="">Show Movie Detail</button>
-                            <p ng-show="filmData.hasSummary">{{filmData.summary}}</p>
+                            <button class="btn btn-success" ng-click="filmData.showSummary = true">Show Movie Detail</button>
+                            <button class="btn btn-danger" ng-show="filmData.showSummary" ng-click="filmData.showSummary = false">TEST</button>
+                            <p ng-show="filmData.showSummary">{{filmData.summary}}</p>
                         </div>                        
                     </div>
                 </div>

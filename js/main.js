@@ -3,6 +3,18 @@
 	
 	app.controller('FilmController', function($scope){
 		this.filmData = filmography;
+
+		// function that will change showSummary to true when that button is clicked
+		$scope.show = function(){
+			console.log(this.filmData.title);
+			this.filmData.showSummary = true;
+		};
+
+		// function that will change showSummary to false when that button is clicked
+		$scope.hide = function(){
+			console.log("closed " + this.filmData.title);
+			this.filmData.showSummary = false;
+		};
 	})
 
 	var filmography = [

@@ -182,14 +182,25 @@ p{
 				color: #000;
 			}
 			img{
-				max-height: 317px;
+				height: 327px;
 			}
 			.film-grid-wrap{
 				display: flex;
 				justify-content: space-around;
 				flex-wrap: wrap;
 				div{
-					align-self: center;
+					position: relative;
+					h4{
+						width: 200px;
+					}
+					p{
+						width: 220px;
+					}
+				}
+				.filmInfo{
+					position: absolute;
+					bottom: 40px;
+					background-color: rgba(255,255,255,0.8);
 				}
 			}
 		}

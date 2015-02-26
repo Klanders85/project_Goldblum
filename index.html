@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="goldBlum">
+    <html ng-app="goldBlum">
     <head>
         <meta charset="utf-8">
         <title>CodeName: The Blum</title>
@@ -51,14 +51,14 @@
                     <div class="film-grid-wrap">
                         <!-- the "film" in "film.filmData" is referencing the "FilmController" alias "film" -->
                         <div ng-repeat="filmData in film.filmData">
-                            <h3>{{filmData.title}}</h3>
-                            <h3>{{filmData.year}}</h3>
-                            <h3>{{filmData.genre}}</h3>
-                            <a ng-href="http://www.imdb.com/title/{{filmData.imdbId}}"><img ng-src="{{filmData.image}}" /></a><br /><br />  
-
-                            <button class="btn btn-success" ng-click="filmData.showSummary = true">Show Movie Detail</button>
-                            <button class="btn btn-danger" ng-show="filmData.showSummary" ng-click="filmData.showSummary = false">TEST</button>
-                            <p ng-show="filmData.showSummary">{{filmData.summary}}</p>
+                            <a ng-href="http://www.imdb.com/title/{{filmData.imdbId}}"><img ng-src="{{filmData.image}}" /></a><br />
+                            <button class="btn btn-success" ng-click="filmData.showSummary = true">Show Detail</button>
+                            <button class="btn btn-danger" ng-show="filmData.showSummary" ng-click="filmData.showSummary = false">Hide Detail</button>
+                            <div class="filmInfo" ng-show="filmData.showSummary">
+                                <h4>{{filmData.title}}</h4>
+                                <h5>{{filmData.year}}</h5>
+                                <p>{{filmData.summary}}</p>
+                            </div>
                         </div>                        
                     </div>
                 </div>

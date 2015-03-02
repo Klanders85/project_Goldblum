@@ -14,58 +14,67 @@
     </head>
     <body>
         <div class="container-fluid">
-        <section name="intro">
-            <div class="intro-section-wrap">
-                <div class="intro-section">
-                    <h1>Goldblum</h1>
-                    <a href="#about">About</a>
-                    <a href="#film">Film</a>
-                    <a href="#bestOf">Best-Of</a>
-                </div>
-            </div>
-        </section> <!--End Intro Section-->
-
-        <!--New Section  -->
-        <div class="section-separator"></div>
-        <section name="about">
-            <div class="about-section-wrap">
-                <div class="about-section" id="about">
-                    <h1>Jeffrey Lynn Goldblum</h1>
-                    <ul>
-                        <li>Born : October 22, 1952</li>
-                        <li>Height : 6'4</li>
-                        <li>Voted : Best Actor of All-Time (beat Vin Diesel)</li>
-                        <li>103 Actor credits</li>
-                        <li>His wife,<a href="https://twitter.com/emchka">@Emilie Livingston</a> is an accomplished dancer and contortionist</li>
-                    </ul>
-                </div>
-            </div>
-        </section> <!--End About Section-->
-
-        <!--New Section  -->
-        <div class="section-separator"></div>
-        <section name="film">
-            <div class="film-section-wrap" ng-controller="FilmController as film">
-                <div class="film-section">
-                    <h1>Memorable Films and Appearances</h1>
-                    <hr />
-                    <div class="film-grid-wrap">
-                        <!-- the "film" in "film.filmData" is referencing the "FilmController" alias "film" -->
-                        <div ng-repeat="filmData in film.filmData">
-                            <a ng-href="http://www.imdb.com/title/{{filmData.imdbId}}"><img ng-src="{{filmData.image}}" /></a><br />
-                            <button class="btn btn-success" ng-click="show()">Show Detail</button>
-                            <button class="btn btn-danger" ng-show="filmData.showSummary" ng-click="hide()">Hide Detail</button>
-                            <div class="filmInfo" ng-show="filmData.showSummary">
-                                <h4>{{filmData.title}}</h4>
-                                <h5>{{filmData.year}}</h5>
-                                <p>{{filmData.summary}}</p>
-                            </div>
-                        </div>                        
+            <section name="intro">
+                <div class="intro-section-wrap">
+                    <div class="intro-section">
+                        <h1>Goldblum</h1>
+                        <a href="#about">About</a>
+                        <a href="#film">Film</a>
+                        <a href="#bestOf">Best-Of</a>
                     </div>
                 </div>
-            </div>
-        </section> <!--End Film Section -->
-    </div>
+            </section> <!--End Intro Section-->
+
+            <!--New Section  -->
+            <div class="section-separator"></div>
+            <section name="about">
+                <div class="about-section-wrap">
+                    <div class="about-section" id="about">
+                        <h1>Jeffrey Lynn Goldblum</h1>
+                        <ul>
+                            <li>Born : October 22, 1952</li>
+                            <li>Height : 6'4</li>
+                            <li>Voted : Best Actor of All-Time (beat Vin Diesel)</li>
+                            <li>103 Actor credits</li>
+                            <li>His wife,<a href="https://twitter.com/emchka">@Emilie Livingston</a> is an accomplished dancer and contortionist</li>
+                        </ul>
+                    </div>
+                </div>
+            </section> <!--End About Section-->
+
+            <!--New Section  -->
+            <div class="section-separator"></div>
+            <section name="film">
+                <div class="film-section-wrap" ng-controller="FilmController as film">
+                    <div class="film-section">
+                        <h1>Memorable Films and Appearances</h1>
+                        <hr />
+                        <div class="film-grid-wrap">
+                            <!-- the "film" in "film.filmData" is referencing the "FilmController" alias "film" -->
+                            <div ng-repeat="filmData in film.filmData">
+                                <a ng-href="http://www.imdb.com/title/{{filmData.imdbId}}"><img ng-src="{{filmData.image}}" /></a><br />
+                                <button class="btn btn-success" ng-click="show()">Show Detail</button>
+                                <button class="btn btn-danger" ng-show="filmData.showSummary" ng-click="hide()">Hide Detail</button>
+                                <div class="filmInfo" ng-show="filmData.showSummary">
+                                    <h4>{{filmData.title}}</h4>
+                                    <h5>{{filmData.year}}</h5>
+                                    <p>{{filmData.summary}}</p>
+                                </div>
+                            </div>                        
+                        </div>
+                    </div>
+                </div>
+            </section> <!--End Film Section -->
+
+            <div class="section-separator"></div>
+            <section name="media">
+                <div class="media-section-wrap">
+                    <div class="media-section">
+                        <h1>This is the media section</h1>
+                    </div>
+                </div>
+            </section>
+        </div>
     </body>
     <script type="text/javascript">
         $(document).ready(function(){

@@ -60,8 +60,11 @@ module.exports = function(grunt) {
     //new task here
     watch: {
       css: {
-        files: ['sass/*.scss'],
-        tasks: ['sass','connect'],
+        files  : ['sass/*.scss'],
+        tasks  : ['sass','connect'],
+        options: {
+          livereload:true,
+        },
       },
     }
   });

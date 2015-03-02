@@ -63,7 +63,7 @@ module.exports = function(grunt) {
         files  : ['sass/*.scss'],
         tasks  : ['sass','connect'],
         options: {
-          livereload:true,
+          livereload:true
         },
       },
     }

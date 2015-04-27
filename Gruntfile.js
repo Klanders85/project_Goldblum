@@ -12,30 +12,30 @@ module.exports = function(grunt) {
       }
     },
 
-    //new task here
+    //Watches and compile Sass to CSS
     sass: {                              // Task
       dist: {                            // Target
         options: {                       // Target options
           style: 'compressed'
         },
         files: {                         // Dictionary of files
-          'css/main.css': 'sass/main.scss',       // 'destination': 'source'
+          'css/main.css': 'sass/main.scss'       // 'destination': 'source'
         }
       }
     },
 
-    //new task here
+    //Takes compiled CSS files and builds them to 1 CSS file
     concat: {
       options: {
         separator: ';',
       },
       dist: {
-        src: ['css/libs/bootstrap.min.css','css/main.css'],
+        src: ['css/main.css'],
         dest: 'css/build/main.css',
       },
     },
 
-    //new task here
+    //Takes the built CSS file and minifies it
     cssmin: {
       add_banner: {
         options: {
@@ -48,29 +48,25 @@ module.exports = function(grunt) {
     },
 
     //new task here
-    connect: {
-      server: {
-        options: {
-          port: 9001,
-          base: ''
-        }
-      }
-    },
+    // connect: {
+    //   server: {
+    //     options: {
+    //       port: 9001,
+    //       base: ''
+    //     }
+    //   }
+    // },
 
     //new task here
     watch: {
       css: {
         files  : ['sass/*.scss'],
-        tasks  : ['sass','connect'],
-        options: {
-          livereload:true
-        },
+        tasks  : ['sass']
       },
     }
   });
 
   // Load the plugin that provides the "uglify" task.
-  grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-concat');
@@ -78,5 +74,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   // Default task(s).
-  grunt.registerTask('default', ['connect','uglify','sass','concat','cssmin','watch']);
+  grunt.registerTask('default', ['uglify','sass','concat','cssmin','watch']);
 };

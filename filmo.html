@@ -1,0 +1,23 @@
+<!--New Section  -->
+            <div class="section-separator"></div>
+            <section name="film">
+                <div class="film-section-wrap" ng-controller="FilmController as film">
+                    <div class="film-section">
+                        <h1>Memorable Films and Appearances</h1>
+                        <hr />
+                        <div class="film-grid-wrap">
+                            <!-- the "film" in "film.filmData" is referencing the "FilmController" alias "film" -->
+                            <div ng-repeat="filmData in film.filmData">
+                                <a ng-href="http://www.imdb.com/title/{{filmData.imdbId}}"><img ng-src="{{filmData.image}}" /></a><br />
+                                <button class="btn btn-success" ng-click="show()">Show Detail</button>
+                                <button class="btn btn-danger" ng-show="filmData.showSummary" ng-click="hide()">Hide Detail</button>
+                                <div class="filmInfo" ng-show="filmData.showSummary">
+                                    <h4>{{filmData.title}}</h4>
+                                    <h5>{{filmData.year}}</h5>
+                                    <p>{{filmData.summary}}</p>
+                                </div>
+                            </div>                        
+                        </div>
+                    </div>
+                </div>
+            </section> <!--End Film Section -->

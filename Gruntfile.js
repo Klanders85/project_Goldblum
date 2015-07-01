@@ -48,16 +48,6 @@ module.exports = function(grunt) {
     },
 
     //new task here
-    connect: {
-      server: {
-        options: {
-          port: 9001,
-          base: ''
-        }
-      }
-    },
-
-    //new task here
     watch: {
       css: {
         files  : ['sass/*.scss'],
@@ -70,7 +60,6 @@ module.exports = function(grunt) {
   });
 
   // Load the plugin that provides the "uglify" task.
-  grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-concat');
@@ -78,5 +67,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   // Default task(s).
-  grunt.registerTask('default', ['connect','uglify','sass','concat','cssmin','watch']);
+  grunt.registerTask('default', ['uglify','sass','concat','cssmin','watch']);
 };
